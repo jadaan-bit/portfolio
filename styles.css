@@ -1,3 +1,4 @@
+/* General styles */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -10,7 +11,7 @@ header {
   background-color: #000;
   padding: 40px 20px;
   text-align: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #222;
 }
 
 h1 {
@@ -24,15 +25,16 @@ nav {
 }
 
 nav a {
-  color: #ff4c4c;
+  color: #fff;
   margin: 0 20px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #bbb;
 }
 
 main {
@@ -47,10 +49,9 @@ section {
 
 h2 {
   font-size: 2rem;
-  border-left: 4px solid #ff4c4c;
-  padding-left: 10px;
   margin-bottom: 30px;
-  color: #ff4c4c;
+  /* Removed red bar and color */
+  color: #fff;
 }
 
 .gallery {
@@ -59,25 +60,19 @@ h2 {
   gap: 30px;
 }
 
-.project a {
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(255, 76, 76, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project a:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 25px rgba(255, 76, 76, 0.25);
-}
-
 .project img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: zoom-in;
+}
+
+.project img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.3);
 }
 
 #contact p {
@@ -90,5 +85,48 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
-  color: #777;
+  color: #666;
+}
+
+/* Lightbox styles */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox.hidden {
+  display: none;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+#close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10000;
+  font-weight: 100;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+#close:hover {
+  color: #bbb;
 }
