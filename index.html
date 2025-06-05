@@ -2,36 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>graphic design!</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jadaan | Graphic Design</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>jadaan</h1>
+  <header class="sticky-header">
     <nav>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#posters">Posters</a></li>
+        <li><a href="#social-media">Social Media Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="work">
-    <h2>My Work</h2>
-<div class="gallery">
-  <div class="project">
-    <img src="images/image1.png" alt="people magazine parody"/>
-  </div>
-</div>
-
+  <section class="hero">
+    <h1>Jadaan</h1>
+    <p>Graphic Designer — Bold, modern branding & visual storytelling.</p>
   </section>
 
-  <section id="contact">
+  <section id="posters" class="work-section">
+    <h2>Posters</h2>
+    <div class="gallery">
+      <div class="project">
+        <a href="images/image1.png" target="_blank" rel="noopener noreferrer">
+          <img src="images/image1.png" alt="Poster design" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="social-media" class="work-section">
+    <h2>Social Media Work</h2>
+    <div class="gallery">
+      <div class="project">
+        <a href="images/image2.png" target="_blank" rel="noopener noreferrer">
+          <img src="images/image2.png" alt="Social media design 1" />
+        </a>
+      </div>
+      <div class="project">
+        <a href="images/image3.png" target="_blank" rel="noopener noreferrer">
+          <img src="images/image3.png" alt="Social media design 2" />
+        </a>
+      </div>
+      <div class="project">
+        <a href="images/image4.png" target="_blank" rel="noopener noreferrer">
+          <img src="images/image4.png" alt="Social media design 3" />
+        </a>
+      </div>
+      <div class="project">
+        <a href="images/image5.png" target="_blank" rel="noopener noreferrer">
+          <img src="images/image5.png" alt="Social media design 4" />
+        </a>
+      </div>
+      <div class="project">
+        <a href="images/image6.png" target="_blank" rel="noopener noreferrer">
+          <img src="images/image6.png" alt="Social media design 5" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
     <h2>Contact</h2>
-    <p>Email: j4jadaan@gmail.com</p>
+    <p>Email: <a href="mailto:j4jadaan@gmail.com">j4jadaan@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/jadaan_von_d00m" target="_blank" rel="noopener noreferrer">@jadaan_von_d00m</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 jadaan</p>
+    <p>&copy; 2025 Jadaan</p>
   </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
