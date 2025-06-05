@@ -2,89 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jadaan | Graphic Design</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jadaan | Graphic Design!</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header class="sticky-header">
+  <header>
+    <h1>Jadaan</h1>
     <nav>
-      <ul>
-        <li><a href="#posters">Posters</a></li>
-        <li><a href="#social-media">Social Media Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#posters">Posters</a>
+      <a href="#social">Social Media</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Jadaan</h1>
-    <p>Graphic Designer — Bold, modern branding & visual storytelling.</p>
-  </section>
-
-  <section id="posters" class="work-section">
-    <h2>Posters</h2>
+  <section id="posters">
+    <h2>Poster Design</h2>
     <div class="gallery">
       <div class="project">
-        <a href="images/image1.png" target="_blank" rel="noopener noreferrer">
-          <img src="images/image1.png" alt="Poster design" />
+        <a href="images/image1.png" target="_blank">
+          <img src="images/image1.png" alt="people magazine parody"/>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="social-media" class="work-section">
+  <section id="social">
     <h2>Social Media Work</h2>
     <div class="gallery">
       <div class="project">
-        <a href="images/image2.png" target="_blank" rel="noopener noreferrer">
-          <img src="images/image2.png" alt="Social media design 1" />
+        <a href="images/image2.png" target="_blank">
+          <img src="images/image2.png" alt="Social media graphic 1"/>
         </a>
       </div>
       <div class="project">
-        <a href="images/image3.png" target="_blank" rel="noopener noreferrer">
-          <img src="images/image3.png" alt="Social media design 2" />
+        <a href="images/image3.png" target="_blank">
+          <img src="images/image3.png" alt="Social media graphic 2"/>
         </a>
       </div>
       <div class="project">
-        <a href="images/image4.png" target="_blank" rel="noopener noreferrer">
-          <img src="images/image4.png" alt="Social media design 3" />
+        <a href="images/image4.png" target="_blank">
+          <img src="images/image4.png" alt="Social media graphic 3"/>
         </a>
       </div>
       <div class="project">
-        <a href="images/image5.png" target="_blank" rel="noopener noreferrer">
-          <img src="images/image5.png" alt="Social media design 4" />
+        <a href="images/image5.png" target="_blank">
+          <img src="images/image5.png" alt="Social media graphic 4"/>
         </a>
       </div>
       <div class="project">
-        <a href="images/image6.png" target="_blank" rel="noopener noreferrer">
-          <img src="images/image6.png" alt="Social media design 5" />
+        <a href="images/image6.png" target="_blank">
+          <img src="images/image6.png" alt="Social media graphic 5"/>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:j4jadaan@gmail.com">j4jadaan@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/jadaan_von_d00m" target="_blank" rel="noopener noreferrer">@jadaan_von_d00m</a></p>
+    <p>Email: j4jadaan@gmail.com</p>
+    <p>Instagram: @jadaan_von_d00m</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Jadaan</p>
   </footer>
-
-  <script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
 </body>
 </html>
