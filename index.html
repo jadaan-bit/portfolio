@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jadaan | Graphic Design!</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -20,20 +20,26 @@
     <section id="posters">
       <h2>Poster Design</h2>
       <div class="gallery">
-        <div class="project"><a href="images/image1.png" target="_blank"><img src="images/image1.png" alt="people magazine parody"/></a></div>
-        <div class="project"><a href="images/image7.png" target="_blank"><img src="images/image7.png" alt="Poster Design 2"/></a></div>
-        <div class="project"><a href="images/image8.png" target="_blank"><img src="images/image8.png" alt="Poster Design 3"/></a></div>
+        <div class="project">
+          <img src="images/image1.png" alt="people magazine parody" data-full="images/image1.png" />
+        </div>
+        <div class="project">
+          <img src="images/image7.png" alt="Poster Design 2" data-full="images/image7.png" />
+        </div>
+        <div class="project">
+          <img src="images/image8.png" alt="Poster Design 3" data-full="images/image8.png" />
+        </div>
       </div>
     </section>
 
     <section id="social">
       <h2>Social Media Work</h2>
       <div class="gallery">
-        <div class="project"><a href="images/image2.png" target="_blank"><img src="images/image2.png" alt="Social media graphic 1"/></a></div>
-        <div class="project"><a href="images/image3.png" target="_blank"><img src="images/image3.png" alt="Social media graphic 2"/></a></div>
-        <div class="project"><a href="images/image4.png" target="_blank"><img src="images/image4.png" alt="Social media graphic 3"/></a></div>
-        <div class="project"><a href="images/image5.png" target="_blank"><img src="images/image5.png" alt="Social media graphic 4"/></a></div>
-        <div class="project"><a href="images/image6.png" target="_blank"><img src="images/image6.png" alt="Social media graphic 5"/></a></div>
+        <div class="project"><img src="images/image2.png" alt="Social media graphic 1" data-full="images/image2.png" /></div>
+        <div class="project"><img src="images/image3.png" alt="Social media graphic 2" data-full="images/image3.png" /></div>
+        <div class="project"><img src="images/image4.png" alt="Social media graphic 3" data-full="images/image4.png" /></div>
+        <div class="project"><img src="images/image5.png" alt="Social media graphic 4" data-full="images/image5.png" /></div>
+        <div class="project"><img src="images/image6.png" alt="Social media graphic 5" data-full="images/image6.png" /></div>
       </div>
     </section>
 
@@ -47,5 +53,39 @@
   <footer>
     <p>&copy; 2025 Jadaan</p>
   </footer>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="hidden">
+    <span id="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged image" />
+  </div>
+
+  <script>
+    // Lightbox script
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('close');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.dataset.full;
+        lightbox.classList.remove('hidden');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.add('hidden');
+      lightboxImg.src = '';
+    });
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+      }
+    });
+  </script>
 </body>
 </html>
