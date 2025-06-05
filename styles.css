@@ -1,129 +1,67 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background: #000; /* black background */
-  color: #eee;
+  background: #000;
+  color: #fff;
 }
 
-header.sticky-header {
-  position: sticky;
-  top: 0;
+header {
   background-color: #111;
-  padding: 15px 0;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff4c4c;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 20px;
-}
-
-nav ul li a {
-  color: #eee;
+nav a {
+  color: #ff4c4c;
+  margin: 0 15px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
-nav ul li a:hover {
-  color: #f39c12; /* gold accent on hover */
+nav a:hover {
+  text-decoration: underline;
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px 60px;
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.hero h1 {
-  font-weight: 600;
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-weight: 300;
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #bbb;
-}
-
-.work-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.work-section h2 {
-  font-weight: 600;
-  margin-bottom: 25px;
-  font-size: 2rem;
-  text-align: center;
-  color: #f39c12;
+h2 {
+  border-bottom: 1px solid #ff4c4c;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #ff4c4c;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  gap: 20px;
 }
 
-.project {
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project a {
+  display: block;
 }
 
 .project img {
   width: 100%;
-  height: auto;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.4s ease;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
 }
 
-.project:hover img {
+.project img:hover {
   transform: scale(1.05);
-}
-
-.project:hover {
-  box-shadow: 0 8px 20px rgba(243, 156, 18, 0.7);
-}
-
-.contact-section {
-  max-width: 600px;
-  margin: 60px auto 40px;
-  padding: 0 20px;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.contact-section a {
-  color: #f39c12;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-section a:hover {
-  text-decoration: underline;
 }
 
 footer {
   background: #111;
-  color: #666;
+  color: white;
   text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  padding: 20px;
+  margin-top: 40px;
 }
