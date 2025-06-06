@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jadaan | Graphic Design!</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Jadaan</h1>
+    <nav>
+      <a href="#personal">Personal Projects</a>
+      <a href="#social">Social Media</a>
+      <a href="#ads">Advertisements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="personal">
+    <h2>Personal Projects</h2>
+    <div class="gallery">
+      <img src="images/personal1.png" alt="Personal Project 1" />
+      <img src="images/personal2.png" alt="Personal Project 2" />
+      <img src="images/personal3.png" alt="Personal Project 3" />
+      <img src="images/personal4.png" alt="Personal Project 4" />
+    </div>
+  </section>
+
+  <section id="social">
+    <h2>Social Media</h2>
+    <div class="gallery">
+      <img src="images/sm1.png" alt="Social Media Design 1" />
+      <img src="images/sm2.png" alt="Social Media Design 2" />
+      <img src="images/sm3.png" alt="Social Media Design 3" />
+      <img src="images/sm4.png" alt="Social Media Design 4" />
+      <img src="images/sm5.png" alt="Social Media Design 5" />
+      <img src="images/sm6.png" alt="Social Media Design 6" />
+    </div>
+  </section>
+
+  <section id="ads">
+    <h2>Advertisements</h2>
+    <div class="gallery">
+      <img src="images/ad1.gif" alt="Ad Design 1" />
+      <img src="images/ad2.gif" alt="Ad Design 2" />
+      <img src="images/ad3.png" alt="Ad Design 3" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: j4jadaan@gmail.com</p>
+    <p>Instagram: @jadaan_von_d00m</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jadaan</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
