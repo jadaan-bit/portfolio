@@ -13,6 +13,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Font styling for name */
+.helvetica {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.gothic {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 1.1em;
+  margin: 0 6px;
+}
+
 header {
   text-align: center;
   padding: 60px 20px 40px;
@@ -20,10 +33,26 @@ header {
 
 header h1 {
   font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Section formatting */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
   letter-spacing: 1.5px;
 }
 
-/* Remove default scrollbars visually */
+/* Horizontal scroll gallery */
 .gallery {
   display: flex;
   gap: 30px;
@@ -39,18 +68,6 @@ header h1 {
   display: none; /* Chrome, Safari */
 }
 
-section {
-  padding: 60px 20px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2em;
-  letter-spacing: 1.5px;
-}
-
-/* Project container */
 .project {
   flex: 0 0 auto;
   background-color: #000;
