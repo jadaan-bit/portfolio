@@ -2,121 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>jadaan | graphic design!</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jadaan Von Doom Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
-    <h1>jadaan</h1>
-    <nav>
-      <a href="#personal-projects">Personal Projects</a>
-      <a href="#social-media">Social Media Work</a>
-      <a href="#advertisements">Advertisements</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>
+      <span class="helvetica">Jadaan</span>
+      <span class="gothic">Von</span>
+      <span class="helvetica">Doom</span>
+    </h1>
   </header>
 
-  <section id="personal-projects">
-    <h2>Personal Projects</h2>
-    <div class="gallery">
-      <div class="project">
-        <img src="images/personal1.png" alt="Personal Project 1" />
+    <section id="social-media">
+      <h2>Social Media Work</h2>
+      <div class="gallery">
+        <div class="project"><img src="images/sm1.png" alt="SM1" /></div>
+        <div class="project"><img src="images/sm2.png" alt="SM2" /></div>
+        <div class="project"><img src="images/sm3.png" alt="SM3" /></div>
+        <div class="project"><img src="images/sm4.png" alt="SM4" /></div>
+        <div class="project"><img src="images/sm5.png" alt="SM5" /></div>
       </div>
-      <div class="project">
-        <img src="images/personal2.png" alt="Personal Project 2" />
-      </div>
-      <div class="project">
-        <img src="images/personal3.png" alt="Personal Project 3" />
-      </div>
-      <div class="project">
-        <img src="images/personal4.png" alt="Personal Project 4" />
-      </div>
-      <div class="project">
-        <img src="images/personal5.png" alt="Personal Project 5" />
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="social-media">
-    <h2>Social Media Work</h2>
-    <div class="gallery">
-      <div class="project">
-        <img src="images/sm1.png" alt="Social Media Work 1" />
+    <section id="personal-projects">
+      <h2>Personal Projects</h2>
+      <div class="gallery">
+        <div class="project"><img src="images/personal1.png" alt="PP1" /></div>
+        <div class="project"><img src="images/personal2.png" alt="PP2" /></div>
+        <div class="project"><img src="images/personal3.png" alt="PP3" /></div>
+        <div class="project"><img src="images/personal4.png" alt="PP4" /></div>
+        <div class="project"><img src="images/personal5.png" alt="PP5" /></div>
       </div>
-      <div class="project">
-        <img src="images/sm2.png" alt="Social Media Work 2" />
+    </section>
+
+    <section id="advertisements">
+      <h2>Advertisement Work</h2>
+      <div class="gallery">
+        <div class="project"><img src="images/ad1.gif" alt="Ad1" /></div>
+        <div class="project"><img src="images/ad2.gif" alt="Ad2" /></div>
+        <div class="project"><img src="images/ad3.png" alt="Ad3" /></div>
       </div>
-      <div class="project">
-        <img src="images/sm3.png" alt="Social Media Work 3" />
-      </div>
-      <div class="project">
-        <img src="images/sm4.png" alt="Social Media Work 4" />
-      </div>
-      <div class="project">
-        <img src="images/sm5.png" alt="Social Media Work 5" />
-      </div>
-    </div>
-  </section>
-
-  <section id="advertisements">
-    <h2>Advertisements</h2>
-    <div class="gallery">
-      <div class="project">
-        <img src="images/ad1.gif" alt="Advertisement 1" />
-      </div>
-      <div class="project">
-        <img src="images/ad2.gif" alt="Advertisement 2" />
-      </div>
-      <div class="project">
-        <img src="images/ad3.png" alt="Advertisement 3" />
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: j4jadaan@gmail.com</p>
-    <p>Instagram: @jadaan_von_d00m</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 jadaan</p>
-  </footer>
-
-  <!-- Image Overlay -->
-  <div id="overlay" class="hidden">
-    <span id="closeBtn">&times;</span>
-    <img id="overlayImg" src="" alt="Enlarged project image" />
-  </div>
-
-  <script>
-    // Image click to enlarge overlay
-    const overlay = document.getElementById('overlay');
-    const overlayImg = document.getElementById('overlayImg');
-    const closeBtn = document.getElementById('closeBtn');
-    const projects = document.querySelectorAll('.project img');
-
-    projects.forEach(img => {
-      img.addEventListener('click', () => {
-        overlayImg.src = img.src;
-        overlay.classList.remove('hidden');
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      overlay.classList.add('hidden');
-      overlayImg.src = '';
-    });
-
-    // Close overlay on clicking outside image
-    overlay.addEventListener('click', e => {
-      if(e.target === overlay) {
-        overlay.classList.add('hidden');
-        overlayImg.src = '';
-      }
-    });
-  </script>
-
-</body>
+    </section>
+  </body>
 </html>
