@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>jadaan | graphic design!</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
   <header>
     <h1>jadaan</h1>
     <nav>
-      <a href="#personal">Personal Projects</a>
+      <a href="#personal-projects">Personal Projects</a>
       <a href="#social-media">Social Media Work</a>
       <a href="#advertisements">Advertisements</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="personal">
+  <section id="personal-projects">
     <h2>Personal Projects</h2>
     <div class="gallery">
       <div class="project">
@@ -55,6 +55,7 @@
       </div>
       <div class="project">
         <img src="images/sm5.png" alt="Social Media Work 5" />
+      </div>
     </div>
   </section>
 
@@ -83,6 +84,39 @@
     <p>&copy; 2025 jadaan</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  <!-- Image Overlay -->
+  <div id="overlay" class="hidden">
+    <span id="closeBtn">&times;</span>
+    <img id="overlayImg" src="" alt="Enlarged project image" />
+  </div>
+
+  <script>
+    // Image click to enlarge overlay
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlayImg');
+    const closeBtn = document.getElementById('closeBtn');
+    const projects = document.querySelectorAll('.project img');
+
+    projects.forEach(img => {
+      img.addEventListener('click', () => {
+        overlayImg.src = img.src;
+        overlay.classList.remove('hidden');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      overlayImg.src = '';
+    });
+
+    // Close overlay on clicking outside image
+    overlay.addEventListener('click', e => {
+      if(e.target === overlay) {
+        overlay.classList.add('hidden');
+        overlayImg.src = '';
+      }
+    });
+  </script>
+
 </body>
 </html>
