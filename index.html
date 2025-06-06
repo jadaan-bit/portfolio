@@ -3,89 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jadaan | Graphic Design!</title>
+  <title>jadaan | graphic design!</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Jadaan</h1>
+    <h1>jadaan</h1>
     <nav>
+      <a href="#personal-projects">Personal Projects</a>
+      <a href="#social-media">Social Media Work</a>
       <a href="#posters">Posters</a>
-      <a href="#social">Social Media</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="posters">
-      <h2>Poster Design</h2>
-      <div class="gallery">
-        <div class="project">
-          <img src="images/image1.png" alt="people magazine parody" data-full="images/image1.png" />
-        </div>
-        <div class="project">
-          <img src="images/image7.png" alt="Poster Design 2" data-full="images/image7.png" />
-        </div>
-        <div class="project">
-          <img src="images/image8.png" alt="Poster Design 3" data-full="images/image8.png" />
-        </div>
+    <section id="personal-projects">
+      <h2>Personal Projects</h2>
+      <div class="behance-embed">
+        <iframe src="https://www.behance.net/embed/project/117531349?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </section>
 
-    <section id="social">
+    <section id="social-media">
       <h2>Social Media Work</h2>
-      <div class="gallery">
-        <div class="project"><img src="images/image2.png" alt="Social media graphic 1" data-full="images/image2.png" /></div>
-        <div class="project"><img src="images/image3.png" alt="Social media graphic 2" data-full="images/image3.png" /></div>
-        <div class="project"><img src="images/image4.png" alt="Social media graphic 3" data-full="images/image4.png" /></div>
-        <div class="project"><img src="images/image5.png" alt="Social media graphic 4" data-full="images/image5.png" /></div>
-        <div class="project"><img src="images/image6.png" alt="Social media graphic 5" data-full="images/image6.png" /></div>
+      <div class="behance-embed">
+        <iframe src="https://www.behance.net/embed/project/118154011?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </section>
+
+    <section id="posters">
+      <h2>Posters</h2>
+      <div class="behance-embed">
+        <iframe src="https://www.behance.net/embed/project/119261769?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: j4jadaan@gmail.com</p>
-      <p>Instagram: @jadaan_von_d00m</p>
+      <p>Instagram: <a href="https://instagram.com/jadaan_von_d00m" target="_blank" rel="noopener">@jadaan_von_d00m</a></p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Jadaan</p>
+    <p>&copy; 2025 jadaan</p>
   </footer>
-
-  <!-- Lightbox overlay -->
-  <div id="lightbox" class="hidden">
-    <span id="close">&times;</span>
-    <img id="lightbox-img" src="" alt="Enlarged image" />
-  </div>
-
-  <script>
-    // Lightbox script
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.getElementById('close');
-
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.style.cursor = 'zoom-in';
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.dataset.full;
-        lightbox.classList.remove('hidden');
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      lightboxImg.src = '';
-    });
-
-    // Close lightbox when clicking outside the image
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox) {
-        lightbox.classList.add('hidden');
-        lightboxImg.src = '';
-      }
-    });
-  </script>
 </body>
 </html>
