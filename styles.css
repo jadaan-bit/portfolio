@@ -10,7 +10,7 @@ body {
   color: #fff;
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
-  /* overflow-x: hidden; */ /* Remove or comment this out */
+  /* overflow-x: hidden;  <-- REMOVED to enable horizontal scroll */
 }
 
 /* Font styling for name */
@@ -60,7 +60,7 @@ h2 {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 20px;
-  justify-content: flex-start; /* Changed from center */
+  justify-content: flex-start; /* aligns images left to enable scrolling */
   scrollbar-width: none; /* Firefox */
 }
 
@@ -71,9 +71,9 @@ h2 {
 .project {
   flex: 0 0 auto;
   background-color: #000;
-  width: 80vw;         /* Responsive width */
-  max-width: 500px;    /* Max width */
-  height: auto;        /* Let height adjust */
+  width: 80vw;        /* responsive width */
+  max-width: 500px;   /* max width */
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,14 +84,15 @@ h2 {
 }
 
 .project img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
   transform: scale(1.03);
+  /* subtle black glow */
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
 }
