@@ -1,10 +1,42 @@
-body {
+/* Reset + base */
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #000;
   color: #fff;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
   overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+}
+
+/* Remove default scrollbars visually */
+.gallery {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  justify-content: center;
+  scrollbar-width: none; /* Firefox */
+}
+
+.gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 section {
@@ -18,16 +50,7 @@ h2 {
   letter-spacing: 1.5px;
 }
 
-.gallery {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 20px;
-  justify-content: center;
-}
-
+/* Project container */
 .project {
   flex: 0 0 auto;
   background-color: #000;
@@ -53,13 +76,4 @@ h2 {
 .project:hover {
   transform: scale(1.03);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
-}
-
-::-webkit-scrollbar {
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 5px;
 }
