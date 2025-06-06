@@ -10,7 +10,7 @@ body {
   color: #fff;
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
-  /* overflow-x: hidden;  <-- REMOVED to enable horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* Font styling for name */
@@ -60,39 +60,37 @@ h2 {
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 20px;
-  justify-content: flex-start; /* aligns images left to enable scrolling */
-  scrollbar-width: none; /* Firefox */
+  justify-content: center;
+  scrollbar-width: none;
 }
 
 .gallery::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 .project {
   flex: 0 0 auto;
   background-color: #000;
-  width: 80vw;        /* responsive width */
-  max-width: 500px;   /* max width */
-  height: auto;
+  width: 500px;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   scroll-snap-align: center;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project img {
-  max-width: 100%;
-  height: auto;
+  max-width: 90%;
+  max-height: 90%;
   object-fit: contain;
-  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .project:hover {
   transform: scale(1.03);
-  /* subtle black glow */
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
 }
