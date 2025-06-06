@@ -1,132 +1,107 @@
-/* General styles */
+/* Reset and base */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #000;
-  color: #fff;
-}
-
-header {
-  background-color: #000;
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 1px solid #222;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-nav {
-  margin-top: 15px;
-}
-
-nav a {
-  color: #fff;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #bbb;
-}
-
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-section {
-  margin-bottom: 80px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  /* Removed red bar and color */
-  color: #fff;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: zoom-in;
-}
-
-.project img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.3);
-}
-
-#contact p {
-  font-size: 1.1rem;
+  background: #000; /* black background */
+  color: #fff; /* white text */
   line-height: 1.6;
 }
 
-footer {
-  background: #111;
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9rem;
-  color: #666;
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
-/* Lightbox styles */
-#lightbox {
-  position: fixed;
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+nav a {
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Main sections */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Section headings */
+section h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Responsive Behance embed container */
+.behance-embed {
+  position: relative;
+  width: 100%;
+  max-width: 404px;
+  margin: 0 auto 40px auto;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+
+  /* Hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.behance-embed:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Maintain aspect ratio for iframe */
+.behance-embed::before {
+  content: "";
+  display: block;
+  padding-top: 78.2%; /* Aspect ratio: 316/404 = ~0.782 */
+}
+
+.behance-embed iframe {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  border: none;
 }
 
-#lightbox.hidden {
-  display: none;
+/* Contact section */
+#contact p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
-#lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
-  box-shadow: 0 0 40px rgba(255,255,255,0.4);
-}
-
-#close {
-  position: fixed;
-  top: 20px;
-  right: 30px;
-  font-size: 3rem;
+/* Footer */
+footer {
+  background: #111;
   color: #fff;
-  cursor: pointer;
-  user-select: none;
-  z-index: 10000;
-  font-weight: 100;
-  line-height: 1;
-  transition: color 0.3s ease;
-}
-
-#close:hover {
-  color: #bbb;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
